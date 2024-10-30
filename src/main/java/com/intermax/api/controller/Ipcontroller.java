@@ -15,10 +15,7 @@ import me.legrange.mikrotik.MikrotikApiException;
 @RestController
 @RequestMapping("/")
 public class Ipcontroller {
-    @GetMapping("/")
-    public String helloworld(){
-        return"hello world";
-    }
+
     @PostMapping("/cortar")
     public ResponseEntity<Ipmodel> corte(@RequestBody Ipmodel ipmodel) throws MikrotikApiException{
         String result = new IpService().cortar(ipmodel);
