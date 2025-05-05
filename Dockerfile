@@ -7,6 +7,9 @@ WORKDIR /app
 # Copiamos el jar compilado al contenedor (ajusta el nombre del jar si es distinto)
 COPY target/corte-automatico-0.0.1-SNAPSHOT.jar  app.jar
 
+# Copiamos el archivo de configuración al contenedor
+COPY .env .env
+
 # Expone el puerto que tu app usa (normalmente 8080)
 EXPOSE 8080
 
