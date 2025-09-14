@@ -11,7 +11,7 @@ COPY target/corte-automatico-0.0.1-SNAPSHOT.jar  app.jar
 COPY .env .env
 
 # Expone el puerto que tu app usa (normalmente 8080)
-EXPOSE 8080
+EXPOSE 8000
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
